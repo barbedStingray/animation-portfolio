@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aniPortfolio {
+  border: 2px solid blue;
+  background-color: grey;
+  width: 100dvw;
+  height: 100dvh;
+}
