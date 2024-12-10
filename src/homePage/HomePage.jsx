@@ -10,6 +10,7 @@ const HomePage = () => {
 
             <Link to='/classicHam'>Classic Hamburger</Link>
             <Link to='/reverseGallery'>Reverse Gallery</Link>
+            <Link to='/spinnerCircles'>Swirly Circles Loader</Link>
 
         </div>
     )

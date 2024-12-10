@@ -6,6 +6,8 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import HomePage from './homePage/HomePage';
 import ClassicHam from './demoProjects/dropMenus/ClassicHam/ClassicHam';
 import ReverseSlider from './demoProjects/slideshows/reverseSlider/ReverseSlider';
+import SpinnerCircles from './demoProjects/loaders/spinnerCircles/SpinnerCircles';
+
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
 
       <Route path='/classicHam' element={<ClassicHam />} />
       <Route path='/reverseGallery' element={<ReverseSlider />} />
+      <Route path='/spinnerCircles' element={<SpinnerCircles />} />
 
 
 

@@ -1,0 +1,96 @@
+  
+  .swirlyCirclePage {
+    border: 2px solid blue;
+    width: 100%vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swirlyCircle {
+    /* border: 2px solid black; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vh;
+    height: 35vh;
+    /* border-radius: 50%; */
+  }
+  
+  .innerSwirly {
+    /* border: 2px solid blue; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 30vh;
+  }
+  
+  .deepSwirly {
+    /* border: 2px solid blue; */
+    position: relative;
+    width: 25vh;
+    height: 25vh;
+  }
+  
+  .swirlyCircle::before,
+  .innerSwirly::before,
+  .deepSwirly::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 50%;
+    border: 10px solid transparent;
+    /* WEIRD THAT THIS IS NECESSARY */
+    box-sizing: border-box;
+  
+    animation: rotate 3s linear infinite;
+  }
+  
+  .swirlyCircle::before {
+    background: linear-gradient(white, white) padding-box,
+      conic-gradient(from 0deg,
+        white 25%,
+        gold,
+        black,
+        magenta,
+        white) border-box;
+  }
+
+  .innerSwirly::before {
+    background: linear-gradient(white, white) padding-box,
+      conic-gradient(from 60deg,
+        white 25%,
+        gold,
+        black,
+        magenta,
+        white) border-box;
+  }
+  
+  .deepSwirly::before {
+    background: linear-gradient(white, white) padding-box,
+      conic-gradient(from 120deg,
+        white 25%,
+        gold,
+        black,
+        magenta,
+        white) border-box;
+  
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
