@@ -1,0 +1,48 @@
+.reverseSlider {
+    border: 2px solid blue;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .revealScroller {
+    border: 2px solid red;
+    width: 75vh;
+    height: 65vh;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  /* side scroller left */
+  .scroller {
+    border: 2px solid greenyellow;
+    flex: 1;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .slideLabel {
+    border: 2px solid green;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* picture scroller right */
+  .reveal {
+    border: 2px solid purple;
+    flex: 2;
+    overflow: scroll;
+    /* disables user interation */
+    pointer-events: none;
+  }
+  
+  .picture {
+    width: 100%;
+    height: 100%;
+  }
+  
